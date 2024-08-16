@@ -15,8 +15,12 @@ learning_project_dj\Scripts\activate.bat
 # Deactivate virtual env
 deactivate
 
-##### Django Project ########
+# Django Project #
 Creating project: `django-admin startproject learning_project`
+
 Creating app: `python manage.py startapp employees`
-Running server: `python manage.py runserver`
+
+Running server: `python manage.py runserver 0.0.0.0:8000`
+
 Make Migrations: `python manage.py makemigrations employees`
+
