@@ -1,0 +1,1 @@
+from .hotels_v1 import Hotels_V1
