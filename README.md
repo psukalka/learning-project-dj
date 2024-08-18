@@ -24,3 +24,12 @@ Running server: `python manage.py runserver 0.0.0.0:8000`
 
 Make Migrations: `python manage.py makemigrations employees`
 
+# Upgrade #
+sudo yum update && sudo yum upgrade -y
+
+sudo yum groupinstall "Development Tools"
+sudo yum install python3-devel
+
+pip install --upgrade wheel
+
+pip install uwsgi
