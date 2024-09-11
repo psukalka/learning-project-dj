@@ -9,6 +9,7 @@ class HelloClaude_V1(View):
         for t in text:
             yield f"{t}. "
             time.sleep(1)
+            # return f"{t}. "
             
 
     def get(self, request, *args, **kwargs):

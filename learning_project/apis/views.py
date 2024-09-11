@@ -9,3 +9,8 @@ def index(request):
     for emp in emps:
         emp_list.append(emp.to_json())
     return JsonResponse({"items": emp_list})
+
+def ping(request):
+    import time
+    time.sleep(1)
+    return JsonResponse({"message": "Hello Pavan"})

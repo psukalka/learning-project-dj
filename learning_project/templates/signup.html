@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Meta Tags Example</title>
+    
+    <!-- Custom meta tags -->
+    <meta name="myapp-version" content="1.0.3">
+    <meta name="myapp-author" content="Jane Doe">
+    <meta name="myapp-lastUpdated" content="2023-08-31">
+</head>
+<body>
+    <h1>Custom Meta Tags Example</h1>
+    <div id="meta-info"></div>
+
+    <script>
+        function getCustomMetaTag(name) {
+            const tag = document.querySelector(`meta[name="${name}"]`);
+            return tag ? tag.getAttribute('content') : null;
+        }
+
+        function displayMetaInfo() {
+            const version = getCustomMetaTag('myapp-version');
+            const author = getCustomMetaTag('myapp-author');
+            const lastUpdated = getCustomMetaTag('myapp-lastUpdated');
+
+            const infoDiv = document.getElementById('meta-info');
+            infoDiv.innerHTML = `
+                <p>Version: ${version}</p>
+                <p>Author: ${author}</p>
+                <p>Last Updated: ${lastUpdated}</p>
+            `;
+        }
+
+        // Call the function when the page loads
+        window.onload = displayMetaInfo;
+    </script>
+</body>
+</html>

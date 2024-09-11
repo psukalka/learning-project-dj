@@ -17,9 +17,13 @@ Including another URLconf
 from apis import urls as api_urls
 from django.contrib import admin
 from django.urls import include, path
+from .pages import LoginPage, SignUpPage, AboutUsPage
 
 urlpatterns = [
     path('api/', include(api_urls)),
     path('employees/', include('employees.urls')),
     path('admin/', admin.site.urls),
+    path('login/', LoginPage.as_view()),
+    path('signup/', SignUpPage.as_view()),
+    path('about-us/', AboutUsPage.as_view())
 ]

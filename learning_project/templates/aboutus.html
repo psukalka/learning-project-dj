@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval() Example</title>
+</head>
+<body>
+    <h1>Current Time</h1>
+    <div id="clock"></div>
+    <button onclick="stopClock()">Stop Clock</button>
+
+    <script>
+        let clockInterval;
+
+        function updateClock() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString();
+            document.getElementById('clock').textContent = timeString;
+        }
+
+        function startClock() {
+            updateClock(); // Initial call to display time immediately
+            clockInterval = setInterval(updateClock, 1000); // Update every 1000ms (1 second)
+        }
+
+        function stopClock() {
+            clearInterval(clockInterval);
+        }
+
+        // Start the clock when the page loads
+        startClock();
+    </script>
+</body>
+</html>
